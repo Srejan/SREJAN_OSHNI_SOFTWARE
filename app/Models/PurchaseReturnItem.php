@@ -18,4 +18,9 @@ class PurchaseReturnItem extends Model
     {
         return $this->belongsTo(Product::class);
     }
+
+    public function purchase_return_item_barcode()
+    {
+        return $this->hasMany(PurchaseReturnItemBarcode::class);
+    }
 }

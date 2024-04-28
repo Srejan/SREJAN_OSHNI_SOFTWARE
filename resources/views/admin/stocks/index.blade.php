@@ -36,6 +36,16 @@
                         </tr>
                         </thead>
                         <tbody>
+                            @foreach($records as $record)
+                            <tr>
+                                <td>{{ $record->name }}</td>
+                                <td>{{ $record->total_purchase_quantity }}</td>
+                                <td>{{ $record->total_purchase_return_quantity }}</td>
+                                <td>{{ $record->total_sale_quantity }}</td>
+                                <td>{{ $record->total_sale_return_quantity }}</td>
+                                <td>{{ $record->total_purchase_quantity + $record->total_sale_return_quantity - $record->total_sale_quantity - $record->total_purchase_return_quantity }}</td>
+                            </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

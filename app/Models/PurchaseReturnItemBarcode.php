@@ -13,4 +13,6 @@ class PurchaseReturnItemBarcode extends Model
     {
         return $this->belongsTo(PurchaseReturnItem::class);
     }
+
+    
 }

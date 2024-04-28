@@ -19,4 +19,9 @@ class PurchaseItem extends Model
         return $this->belongsTo(Product::class);
     }
 
+    public function purchase_item_barcode()
+    {
+        return $this->hasMany(PurchaseItemBarcode::class);
+    }
+
 }

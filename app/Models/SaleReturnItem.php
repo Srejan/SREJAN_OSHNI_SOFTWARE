@@ -18,4 +18,9 @@ class SaleReturnItem extends Model
     {
         return $this->belongsTo(Product::class);
     }
+
+    public function sale_return_item_barcode()
+    {
+        return $this->hasMany(SaleReturnItemBarcode::class);
+    }
 }
